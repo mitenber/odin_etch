@@ -1,34 +1,28 @@
 let screen = document.getElementById("board");
+let button = document.querySelectorAll(".button")
 let row;
 let column;
-let GRID_SIZE = 16;
+let gridSize = 16;
 
-/*for (let i = 0; i < GRID_SIZE; i++) {
+for (i=0; i<gridSize; i++){
     row = document.createElement("div");
-    row.className = "flex-container";
-    row.innerHTML = "";
-    screen.appendChild(row);
-
-    for (let j = 0; j < GRID_SIZE; j++) {
-        column = document.createElement("div");
-        column.className = "flex-boxes";
-        column.classList.add = "rows";
-        column.innerHTML = 'a';
-        row.appendChild(column);
-    }
-
-}*/
-
-for (i=0; i<GRID_SIZE; i++){
-    row = document.createElement("div");
-    row.className = 'rows';
+    row.className = 'columns';
     
     screen.appendChild(row);
-    for (j=0; j<GRID_SIZE; j++) {
+    for (j=0; j<gridSize; j++) {
         column = document.createElement("div");
-        column.className = 'columns';
-        column.innerHTML = i+j;
+        column.className = 'items';
+        column.innerHTML = (i+1) + (j*gridSize);
         row.appendChild(column);
     }
 }
     
+const boxes = document.querySelectorAll('.items')
+
+boxes.forEach(column => {
+    column.addEventListener('mouseover', () => {
+        column.style.backgroundColor = 'red';
+    });
+});
+
+

@@ -1,32 +1,31 @@
 .container {
     display: flex;
-    width: 100%;
-    gap: 10px;
-}
-
-
-.rows {
-    display: flex;
-    flex-direction: column;
-    width:50%;
-    background-color: blue;
-
+    gap: 1px;
 }
 
 
 .columns {
-    
-    background-color:blue;
-    border-color: black;
-    border-style: solid;
-    border-width: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    width:25%;
+
 }
 
-.flexBoxes {
-    flex: 1;
+
+.items {
+    display: flex;
+    background-color:rgb(89, 179, 214);
     border-color: black;
-    border-style: solid;
-    border-width: 2px;
-    max-width: 20px;
-    clear: both;
-  }
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    flex: 1 0 auto;
+    height:auto;
+}
+
+.items:before {
+    content: '';
+    float:left;
+    padding-top: 100%;
+}
