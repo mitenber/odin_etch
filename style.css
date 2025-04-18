@@ -1,11 +1,32 @@
-.flex-container {
+.container {
     display: flex;
-    background-color: rgb(255, 0, 0);
+    width: 100%;
+    gap: 10px;
 }
-  
-.flex-container > div {
-    background-color: #f1f1f1;
-    margin: 10px;
-    padding: 20px;
-    font-size: 30px;
+
+
+.rows {
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    background-color: blue;
+
 }
+
+
+.columns {
+    
+    background-color:blue;
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
+}
+
+.flexBoxes {
+    flex: 1;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    max-width: 20px;
+    clear: both;
+  }
